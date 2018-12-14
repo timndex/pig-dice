@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
 body{
   background-color: cornsilk;
   width: 1000px;
@@ -22,4 +28,8 @@ h1{
   font-family: 'Fruktur', cursive;
   font-size: 50px;
   text-decoration: overline;
+}
+h2{
+  font-family: 'Lobster', cursive;
+  text-align: center;
 }
