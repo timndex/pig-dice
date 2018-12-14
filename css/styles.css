@@ -18,3 +18,8 @@ body{
 #status{
   clear: left;
 }
+h1{
+  font-family: 'Fruktur', cursive;
+  font-size: 50px;
+  text-decoration: overline;
+}
