@@ -12,18 +12,6 @@ body{
   padding: 10px;
   font-family: 'Lobster', cursive;
 }
-.dice{
-  float:left;
-  width:40px;
-  border:#999 1px solid;
-  padding: 10px;
-  font-size: 24px;
-  text-align: center;
-  margin:5px;
-}
-#status{
-  clear: left;
-}
 h1{
   font-family: 'Fruktur', cursive;
   font-size: 50px;
@@ -31,9 +19,25 @@ h1{
   text-shadow: 2px 2px 10px black;
   color: #440617;
 }
+.jumbotron {
+  margin:0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  width: 400px;
+  display: block;
+}
 h2{
-
   text-align: center;
+}
+.dice{
+  width: 100px;
+  height: 100px;
+  border:#999 1px solid;
+  margin: 50px auto;
+  font-size: 24px;
+  box-shadow: 5px 5px #888;
+  border-radius: 25px;
 }
 .form__label {
   font-size: 1.2rem;
@@ -74,4 +78,18 @@ h2{
 .btn:hover {
   background-color: #55c45A;
   cursor:pointer;
+}
+.col-md-5 {
+	padding: 30px 0;
+}
+#total-0, #total-1 {
+	margin: 80px;
+	font-size: 86px;
+}
+#current-0, #current-1 {
+ margin: 0 auto;
+ height: 70px;
+ width: 80px;
+ background-color: red;
+ color: #fff;
 }
