@@ -10,12 +10,11 @@ body{
   margin: 0 auto;
   text-align: center;
   padding: 10px;
-
+  font-family: 'Lobster', cursive;
 }
 .dice{
   float:left;
   width:40px;
-  background: #f5f5f5;
   border:#999 1px solid;
   padding: 10px;
   font-size: 24px;
@@ -33,12 +32,12 @@ h1{
   color: #440617;
 }
 h2{
-  font-family: 'Lobster', cursive;
+
   text-align: center;
 }
 .form__label {
   font-size: 1.2rem;
-  margin-left: 1rem;
+  margin-left: 2rem;
   margin-top: 0.4rem;
   display: block;
   transition: all 0.3s;
@@ -49,7 +48,7 @@ h2{
   color: #333;
   font-size: 1.5rem;
   padding: 1.5rem 1.5rem;
-  border-radius: 0.1rem;
+  border-radius: 0.2rem;
   background-color: white;
   border: none;
   width: 100%;

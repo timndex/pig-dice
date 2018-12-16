@@ -13,18 +13,24 @@
       <h1>Welcome to The Pig-Dice Game</h1>
       <div class ="jumbotron">
           <h2>Player Menu</h2>
-          <form id ="new-contact">
+          <form id ="player1">
             <div class ="form__group">
-              <input type ="text" class ="form__input" placeholder ="Full name" />
-              <label for ="name" class ="form__label">Full Name</label>
+              <input type ="text" class ="player1Name form__input" placeholder ="Player 1 Name" />
+              <label for ="Player1Name" class ="form__label">Player 1 Name:</label>
             </div>
-            <button class="btn" onclick="add()">Add</button>
-          </br><br>
-            <button class="btn" onclick="clearPlayers()">Clear All Players</button>
+          </form>
+          <form id ="player2">
+            <div class="form__group">
+              <input type ="text" class ="player2Name form__input" placeholder ="Player 2 Name" />
+              <label for ="Player2Name" class ="form__label">Player 2 Name:</label>
+            </div>
+          </form>
             <button class="btn" onclick="clearPlayers()">Begin Game</button>
+            <div class = "row">
+              <div class ="col-md-6">
+                <h2>Player1
           </form></br><br>
-       <div id ="die1" class ="dice">0</div>
-       <div id ="die2" class ="dice">0</div>
+       <div id ="die" class ="dice">0</div>
        <button onclick ="rollDice()">Roll Dice</button>
        <h2 id ="status"></h2>
 
