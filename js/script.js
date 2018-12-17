@@ -8,21 +8,22 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 
 */
-var player1;
-var player2;
-var currentPlayer;
+var player1="";
+var player2="";
 function rollDice() {
    return Math.floor(Math.random() * 6) + 1;
    }
 
-function Player(turn){
-  this.roll = 0;
-  this.mainscore = 0;
-  this.score = 0;
-  this.turn = turn;
-  this.playerName;
+function Player(playerName, score, turnScore) {
+  this.playerName = playerName;
+  this.score = score;
+  this.turnScore = turnScore;
 }
-
+// turnScore refers to the total amount of points added from several rollsof the dice
+//score refers to total score
+Player.prototype. = function(diceValue) {
+  if(dice)
+}
 
 
 
@@ -30,12 +31,8 @@ function Player(turn){
 
 // User Interface
 $(document).ready(function() {
-  $("button#begin").submit(function(event){
-    event.preventDefault();
-    player1 = new Player(true);
-    player2 = new Player(false);
-    $(".pig-dice").show();
-    $(".start-game").hide();
+    $(".pig dice").show();
+    $(".players-screen").hide();
   });
 
     var player1Name = $(".player1Name").val();

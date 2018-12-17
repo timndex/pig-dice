@@ -11,50 +11,50 @@
     <script type="text/javascript" src="js/script.js"></script>
   </head>
   <body>
-    <div class ="start-game container">
-      <h1>Welcome to The Pig-Dice Game</h1>
+    <div class ="players-screen container">
+      <h1>welcome to the<img src="images/dancing-pig.gif" alt="Dancing Pig"> Pig-Dice Game</h1>
       <div class ="jumbotron">
           <h2>Player Menu</h2>
           <form id ="player1">
             <div class ="form__group">
-              <input required class ="player1Name form__input form-control" type ="text"  placeholder ="Player 1" />
-              <label for ="Player1Name" class ="form__label">Player 1 Name:</label>
+              <input required class ="player1Name form__input" type ="text"  placeholder ="Player 1" />
+              <label for ="player1Name" class ="form__label">Player 1 Name:</label>
             </div>
           </form>
           <form id ="player2">
             <div class="form__group">
-              <input class ="player2Name form__input form-control" type ="text" placeholder ="Player 2" />
-              <label for ="Player2Name" class ="form__label">Player 2 Name:</label>
+              <input required class ="player2Name form__input" type ="text" placeholder ="Player 2" />
+              <label for ="player2Name" class ="form__label">Player 2 Name:</label>
             </div>
           </form>
-            <button id="begin" class="btn-info btn">Begin</button>
+          <button class="btn btn-primary" id="playButton">Start</button>
       </div>
     </div>
-    <div class ="pig-dice container">
-      <div class = "row">
-        <div class="col-md-5">
-          <h3>Player 1: <span id="player1Name"><span></h3>
-          <p id="total-0"></p>
-          <div id="current-0">
-            <p>Current</p>
-            <p id="current-score-0"></p>
-          </div>
-        </div>
-        <div class="col-md-2 pig-dice">
-          <div class="dice"></div>
-          <p><a id="roll"href="#">Roll</a>
-          <p><a id="roll"href="#">Hold</a>
-          <button id="new-game" class="btn-success btn">New Game</button>
-        </div>
-        <div class="col-md-5">
-          <h3>Player 2: <span id="player2Name"><span></h3>
-          <p id="total-1"></p>
-          <div id="current-1">
-            <p>Current</p>
-            <p id="current-score-1"></p>
-          </div>
-        </div>
+    <div class ="pig dice container">
+      <div class="jumbotron">
+        <h1>Pig Dice Game</h1>
       </div>
+        <div class = "row">
+          <div class="col-md-6" id="player1Name">
+           <div class="player-name">
+             <p>Player 1</p>
+             <button type="button" id="roll1" class="btn btn-danger">Roll</button>
+              <button type="button" id="hold1"class="btn btn-danger">Hold</button>
+              <h2>Turn score: <span class="turn-score1"></span></h2>
+              <h3>Total score: <span class="total-score1"></span></h3>
+           </div>
+          </div>
+          <div class="col-md-6" id="player2Name">
+             <div class="player-name">
+               <p>Player 2</p>
+               <button type="button" id="roll1" class="btn btn-danger">Roll</button>
+                <button type="button" id="hold1"class="btn btn-danger">Hold</button>
+                <h2>Turn score: <span class="turn-score1"></span></h2>
+                <h3>Total score: <span class="total-score1"></span></h3>
+
+             </div>
+          </div>
+        </div>
     </div>
   </body>
 </html>
