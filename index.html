@@ -7,31 +7,33 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel ="stylesheet" type ="text/css" href ="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </head>
   <body>
-    <div class ="begin-game container">
+    <div class ="start-game container">
       <h1>Welcome to The Pig-Dice Game</h1>
       <div class ="jumbotron">
           <h2>Player Menu</h2>
           <form id ="player1">
             <div class ="form__group">
-              <input type ="text" class ="player1Name form__input" placeholder ="Player 1 Name" />
+              <input required class ="player1Name form__input form-control" type ="text"  placeholder ="Player 1" />
               <label for ="Player1Name" class ="form__label">Player 1 Name:</label>
             </div>
           </form>
           <form id ="player2">
             <div class="form__group">
-              <input type ="text" class ="player2Name form__input" placeholder ="Player 2 Name" />
+              <input class ="player2Name form__input form-control" type ="text" placeholder ="Player 2" />
               <label for ="Player2Name" class ="form__label">Player 2 Name:</label>
             </div>
           </form>
-            <button class="btn" onclick="beginGame()">Begin Game</button>
+            <button id="begin" class="btn-info btn">Begin</button>
       </div>
     </div>
     <div class ="pig-dice container">
       <div class = "row">
         <div class="col-md-5">
-          <h3>Player 1</h3>
+          <h3>Player 1: <span id="player1Name"><span></h3>
           <p id="total-0"></p>
           <div id="current-0">
             <p>Current</p>
@@ -42,9 +44,10 @@
           <div class="dice"></div>
           <p><a id="roll"href="#">Roll</a>
           <p><a id="roll"href="#">Hold</a>
+          <button id="new-game" class="btn-success btn">New Game</button>
         </div>
         <div class="col-md-5">
-          <h3>Player 2</h3>
+          <h3>Player 2: <span id="player2Name"><span></h3>
           <p id="total-1"></p>
           <div id="current-1">
             <p>Current</p>
@@ -53,7 +56,5 @@
         </div>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
