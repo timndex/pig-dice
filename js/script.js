@@ -51,12 +51,10 @@ player.prototype.winner = function() {
 $(document).ready(function() {
   $("form#start").click(function(event){
     event.preventDefault();
-    player1 =new Player();
-    player2 =new Player();
-    var player1Name = $(".player1Name").val();
-    var player2Name = $(".player2Name").val();
-    $("#player1Name").text(player1Name);
-    $("#player2Name").text(player2Name);
+    player1 =new Player($("#playerOne").val(), 0);
+    player2 =new Player($("#playerTwo").val(), 0);
+    $("#playerOneName").append("<br>" + "<span>" + player1.name + "</span>");
+     $("#playerTwoName").append("<br>" + "<span>" + player2.name + "</span>");
     player1.playerName = player1Name;
     player2.playerName = player2Name;
   });

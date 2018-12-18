@@ -13,19 +13,27 @@
   <body>
     <div class ="players-screen container">
       <h1>welcome to the<img src="images/dancing-pig.gif" alt="Dancing Pig"> Pig-Dice Game</h1>
+      <p>GAME RULES:
+
+       The game has 2 players, playing in rounds
+       In each turn, a player rolls a dice as many times as he wishes. Each result get added to his ROUND score
+       BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn
+       The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. After that, it's the next player's turn
+       The first player to reach 100 points on GLOBAL score wins the game
+     </p>
       <div class ="jumbotron">
           <h2>Player Menu</h2>
           <form id ="players">
             <div class ="form__group">
-              <input required class ="player1Name form__input" type ="text"  placeholder ="Player 1" />
-              <label for ="player1Name" class ="form__label">Player 1 Name:</label>
+              <input class="form__input" id="playerOne" type ="text"  placeholder ="Player 1" />
+              <label for ="playerOne" class ="form__label">PlayerOne:</label>
             </div>
             <div class="form__group">
-              <input required class ="player2Name form__input" type ="text" placeholder ="Player 2" />
-              <label for ="player2Name" class ="form__label">Player 2 Name:</label>
+              <input class="form__input" id ="playerTWo" type ="text" placeholder ="Player 2" />
+              <label for ="playerTwo" class ="form__label">PlayerTwo:</label>
             </div>
           </form>
-          <button type="submit" class="btn-success start" id="playButton">Start</button>
+          <button type="submit" class="btn" id="start">Start</button>
       </div>
     </div>
     <div class ="pig dice container">
