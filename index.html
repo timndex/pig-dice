@@ -20,7 +20,7 @@
        BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn
        The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. After that, it's the next player's turn
        The first player to reach 100 points on GLOBAL score wins the game
-     </p>
+      </p>
       <div class ="jumbotron">
           <h2>Player Menu</h2>
           <form id ="players">
@@ -33,18 +33,14 @@
               <label for ="playerTwo" class ="form__label">PlayerTwo:</label>
             </div>
           </form>
-          <button type="submit" class="btn" id="start">Start</button>
+          <button type="button" class="btn-info-btn" id="start">Start</button>
       </div>
-    </div>
-    <div class ="pig dice container">
-      <div class="jumbotron">
+
+
+      <div class="pig-dice">
         <h1>Pig Dice Game</h1>
-        <div class="reset">
-          <button type="submit" name="button" class="btn-warning newGame">New Game</button>
-        </div>
-      </div>
         <div class = "row">
-          <div class="col-md-6" id="player1">
+          <div class="col-md-5" id="player1">
            <div class="player-name">
              <p>Player 1</p>
              <button type="button" id="roll1" class="btn-success btn">Roll</button>
@@ -53,7 +49,11 @@
               <h3>Total score: <span class="total-score1"></span></h3>
            </div>
           </div>
-          <div class="col-md-6" id="player2">
+          <div class="col-md-2" id="reset">
+            <button type="button" class="btn-reset">Reset</button>
+          </div>
+
+          <div class="col-md-5" id="player2">
              <div class="player-name">
                <p>Player 2</p>
                <button type="button" id="roll1" class="btn-success btn">Roll</button>
@@ -63,7 +63,9 @@
 
              </div>
           </div>
+
         </div>
+      </div>
     </div>
   </body>
 </html>

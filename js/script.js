@@ -8,24 +8,22 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 
 */
-var player1="";
-var player2="";
-function rollDice() {
+//business logic
+var rolldice = function () {
    return Math.floor(Math.random() * 6) + 1;
    }
 
 function Player(playerName, score, turnScore, roll) {
-  this.playerName = playerName;
+  this.playerName;
   this.score = score;
   this.turnScore = turnScore;
   this.roll =0;
-  this.turn = turn;
 }
 // turnScore refers to the total amount of points added from several rollsof the dice
 //score refers to total score
 Player.prototype.rollone = function() {
-  if(this.roll ==1){
-    this.turnScore =0;
+  if(this.roll == 1){
+    this.turnScore = 0;
     alert("Sorry " + this.playerName + ", you rolled a 1! Your turn is over!")
   } else {
     this.turnScore += this.roll;
@@ -34,7 +32,7 @@ Player.prototype.rollone = function() {
 //hold
 Player.prototype.hold = function(){
   this.score += this.turnScore;
-  this.score = 0;
+  this.turnScore = 0;
   alert(this.playerName + ", your turn is over, pass the mouse!");
 }
 //check for 100
@@ -43,23 +41,39 @@ player.prototype.winner = function() {
     alert(this.playerName + ", you have won!" + "(" + this.score + "points!)" +"Press 'New game'.")
   }
 }
+Player.prototype.newGame = function() {
+  this.roll = 0;
+  this.tempscore = 0;
+  this.totalscore = 0;
+  this.playername = ('');
+}
 
 
 
 
 // User Interface
 $(document).ready(function() {
-  $("form#start").click(function(event){
+  $("form#players").submit(function(event){
     event.preventDefault();
-    player1 =new Player($("#playerOne").val(), 0);
-    player2 =new Player($("#playerTwo").val(), 0);
-    $("#playerOneName").append("<br>" + "<span>" + player1.name + "</span>");
-     $("#playerTwoName").append("<br>" + "<span>" + player2.name + "</span>");
-    player1.playerName = player1Name;
-    player2.playerName = player2Name;
+    player1 =new Player();
+    player2 =new Player());
+    var playerOne =$("input#playerOne").val();
+    var playerTwo =$("input#playerOne").val();
+    $(#player1).text(player1);
+    $(#player2).text(player2);
+    $("#players").hide();
+    $("pig-dice").show();
+    player1.playerName = playerOne;
+    player2.playerName = playerTwo;
   });
 
     $(".reset").click(function(event) {
-    event.preventDefault();
-    $(".player1").val("");
-    $(".player2").val("");
+      p1.reset();
+      p2.reset();
+      $("#players").show();
+      $(".pig-dice").hide();
+      $("input#playerOne").val("");
+      $("input#playerTwo").val("");
+      $(".player1").val("");
+      $(".player2").val("");
+  });

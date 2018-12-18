@@ -59,7 +59,7 @@ h2>img {
   visiblity: hidden;
   transform: translateY(-4rem);
 }
-.button{
+.button {
     background-color: green;
     border: none;
     color: white;
@@ -74,7 +74,7 @@ h2>img {
   background-color: #55c45A;
   cursor:pointer;
 }
-.col-md-6 {
+.col-md-5 {
   font-weight: bold;
   text-align: center;
   border: 3px solid black;
@@ -107,8 +107,10 @@ h2>img {
   font-size: 500%;
   color: red;
 }
-
-#resset {
+.pig-dice {
+  display: none;
+}
+#reset {
   display: block;
   margin:0 auto;
 }
