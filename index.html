@@ -15,42 +15,43 @@
       <h1>welcome to the<img src="images/dancing-pig.gif" alt="Dancing Pig"> Pig-Dice Game</h1>
       <div class ="jumbotron">
           <h2>Player Menu</h2>
-          <form id ="player1">
+          <form id ="players">
             <div class ="form__group">
               <input required class ="player1Name form__input" type ="text"  placeholder ="Player 1" />
               <label for ="player1Name" class ="form__label">Player 1 Name:</label>
             </div>
-          </form>
-          <form id ="player2">
             <div class="form__group">
               <input required class ="player2Name form__input" type ="text" placeholder ="Player 2" />
               <label for ="player2Name" class ="form__label">Player 2 Name:</label>
             </div>
           </form>
-          <button class="btn btn-primary" id="playButton">Start</button>
+          <button type="submit" class="btn-success start" id="playButton">Start</button>
       </div>
     </div>
     <div class ="pig dice container">
       <div class="jumbotron">
         <h1>Pig Dice Game</h1>
+        <div class="reset">
+          <button type="submit" name="button" class="btn-warning newGame">New Game</button>
+        </div>
       </div>
         <div class = "row">
-          <div class="col-md-6" id="player1Name">
+          <div class="col-md-6" id="player1">
            <div class="player-name">
              <p>Player 1</p>
-             <button type="button" id="roll1" class="btn btn-danger">Roll</button>
-              <button type="button" id="hold1"class="btn btn-danger">Hold</button>
+             <button type="button" id="roll1" class="btn-success btn">Roll</button>
+              <button type="button" id="hold1"class="btn-success btn">Hold</button>
               <h2>Turn score: <span class="turn-score1"></span></h2>
               <h3>Total score: <span class="total-score1"></span></h3>
            </div>
           </div>
-          <div class="col-md-6" id="player2Name">
+          <div class="col-md-6" id="player2">
              <div class="player-name">
                <p>Player 2</p>
-               <button type="button" id="roll1" class="btn btn-danger">Roll</button>
-                <button type="button" id="hold1"class="btn btn-danger">Hold</button>
-                <h2>Turn score: <span class="turn-score1"></span></h2>
-                <h3>Total score: <span class="total-score1"></span></h3>
+               <button type="button" id="roll1" class="btn-success btn">Roll</button>
+                <button type="button" id="hold1"class="btn-success btn">Hold</button>
+                <h2>Turn score: <span class="turn-score2"></span></h2>
+                <h3>Total score: <span class="total-score2"></span></h3>
 
              </div>
           </div>

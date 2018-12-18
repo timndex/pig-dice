@@ -14,34 +14,54 @@ function rollDice() {
    return Math.floor(Math.random() * 6) + 1;
    }
 
-function Player(playerName, score, turnScore) {
+function Player(playerName, score, turnScore, roll) {
   this.playerName = playerName;
   this.score = score;
   this.turnScore = turnScore;
+  this.roll =0;
+  this.turn = turn;
 }
 // turnScore refers to the total amount of points added from several rollsof the dice
 //score refers to total score
-Player.prototype. = function(diceValue) {
-  if(dice)
+Player.prototype.rollone = function() {
+  if(this.roll ==1){
+    this.turnScore =0;
+    alert("Sorry " + this.playerName + ", you rolled a 1! Your turn is over!")
+  } else {
+    this.turnScore += this.roll;
+  }
 }
-
+//hold
+Player.prototype.hold = function(){
+  this.score += this.turnScore;
+  this.score = 0;
+  alert(this.playerName + ", your turn is over, pass the mouse!");
+}
+//check for 100
+player.prototype.winner = function() {
+  if(this.score >= 100){
+    alert(this.playerName + ", you have won!" + "(" + this.score + "points!)" +"Press 'New game'.")
+  }
+}
 
 
 
 
 // User Interface
 $(document).ready(function() {
-    $(".pig dice").show();
-    $(".players-screen").hide();
-  });
-
+  $("form#start").click(function(event){
+    event.preventDefault();
+    player1 =new Player();
+    player2 =new Player();
     var player1Name = $(".player1Name").val();
-    $("#player1Name").text(player1Name);
-
     var player2Name = $(".player2Name").val();
+    $("#player1Name").text(player1Name);
     $("#player2Name").text(player2Name);
-
-    player1.playerName=player1Name;
-    player2.playerName=player2Name;
-
+    player1.playerName = player1Name;
+    player2.playerName = player2Name;
   });
+
+    $(".reset").click(function(event) {
+    event.preventDefault();
+    $(".player1").val("");
+    $(".player2").val("");
