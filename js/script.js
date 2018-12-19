@@ -13,39 +13,40 @@ var rolldice = function () {
    return Math.floor(Math.random() * 6) + 1;
    }
 
-function Player(playerName, score, turnScore, roll) {
-  this.playerName;
+function Player(name, score, turnScore, roll) {
+  this.name = name;
   this.score = score;
   this.turnScore = turnScore;
   this.roll =0;
 }
 // turnScore refers to the total amount of points added from several rollsof the dice
 //score refers to total score
-Player.prototype.rollone = function() {
-  if(this.roll == 1){
+Player.prototype.rolldice = function() {
+  if(rolldice() === 1){
     this.turnScore = 0;
-    alert("Sorry " + this.playerName + ", you rolled a 1! Your turn is over!")
+    alert("Sorry " + this.name + ", you rolled a 1! Your turn is over!")
   } else {
-    this.turnScore += this.roll;
+    this.turnScore += rolldice();
+
   }
 }
 //hold
 Player.prototype.hold = function(){
   this.score += this.turnScore;
   this.turnScore = 0;
-  alert(this.playerName + ", your turn is over, pass the mouse!");
+  alert(this.name + ", your turn is over, pass the mouse!");
 }
 //check for 100
 player.prototype.winner = function() {
   if(this.score >= 100){
-    alert(this.playerName + ", you have won!" + "(" + this.score + "points!)" +"Press 'New game'.")
+    alert(this.name + ", you have won!" + "(" + this.score + "points!)" +"Press 'New game'.")
   }
 }
 Player.prototype.newGame = function() {
   this.roll = 0;
-  this.tempscore = 0;
-  this.totalscore = 0;
-  this.playername = ('');
+  this.turnScore = 0;
+  this.score = 0;
+  this.name = name;
 }
 
 
@@ -55,16 +56,15 @@ Player.prototype.newGame = function() {
 $(document).ready(function() {
   $("form#players").submit(function(event){
     event.preventDefault();
-    player1 =new Player();
-    player2 =new Player());
-    var playerOne =$("input#playerOne").val();
-    var playerTwo =$("input#playerOne").val();
-    $(#player1).text(player1);
-    $(#player2).text(player2);
+    player1 =new Player("",0,0,0);
+    player2 =new Player("",0,0,0));
+    playername =("input#playerOne").val();
+    player2.name =("input#playerOne").val();
+    $("#player1").text(player1.playerName);
+    $("#player2").text(player2.playerName);
     $("#players").hide();
     $("pig-dice").show();
-    player1.playerName = playerOne;
-    player2.playerName = playerTwo;
+    con
   });
 
     $(".reset").click(function(event) {
