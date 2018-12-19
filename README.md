@@ -1,16 +1,16 @@
-###PIG DICE GAME
+### PIG DICE GAME
 It is a dice game that can be played by two people against each other, 18/12/2018.
-#By Lorna Wanjiku
-##Description
+# By Lorna Wanjiku
+## Description
 This game is developed for fun. It requires two players. Each has a turn. On each turn a player rolls a dice as many times as he wants until a dice rolls "1". Or he can decide to pass the dice before the dice rolls "1". If a dice rolls "1". All the points he gained in that turn are lost. So it's very tricky to decide when to pass the dice and when to keep playing it.
 
-##Setup/Installation Requirements
+## Setup/Installation Requirements
 Clone to your computer using Terminal
 $ git clone https://github.com/wanjikuciku/pig-dice/
 
 
 
-##Specifications
+## Specifications
 The website:
 displays a form if the user decides to play this game after reading the rules:
 INPUT:"Play Game button pressed"
@@ -31,13 +31,13 @@ displays a message if any one of the player's score reaches 100 and finishes the
 INPUT: Dice rolled a value"
 OUTPUT:"Player(name) has won!!"
 
-##Known Bugs
+## Known Bugs
 the website couldn't handle the query and javascript or gave undesired results), kindly assist if able.
 
-##Technologies Used
+## Technologies Used
 html,javascript,css,
 
 
 Email: lorna.wanjiku56@gmail.com
-##License
+## License
 MIT Copyright (c) 2018 Lorna wanjiku
