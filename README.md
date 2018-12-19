@@ -5,7 +5,10 @@ It is a dice game that can be played by two people against each other, 18/12/201
 This game is developed for fun. It requires two players. Each has a turn. On each turn a player rolls a dice as many times as he wants until a dice rolls "1". Or he can decide to pass the dice before the dice rolls "1". If a dice rolls "1". All the points he gained in that turn are lost. So it's very tricky to decide when to pass the dice and when to keep playing it.
 
 ##Setup/Installation Requirements
-Web Browser
+Clone to your computer using Terminal
+$ git clone https://github.com/wanjikuciku/pig-dice/
+
+
 
 ##Specifications
 The website:
