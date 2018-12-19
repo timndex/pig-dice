@@ -54,17 +54,19 @@ Player.prototype.newGame = function() {
 
 // User Interface
 $(document).ready(function() {
-  $("form#players").submit(function(event){
-    event.preventDefault();
-    player1 =new Player("",0,0,0);
-    player2 =new Player("",0,0,0));
-    playername =("input#playerOne").val();
-    player2.name =("input#playerOne").val();
-    $("#player1").text(player1.playerName);
-    $("#player2").text(player2.playerName);
-    $("#players").hide();
-    $("pig-dice").show();
-    con
+  //$("form#players").submit(function(event){
+    //event.preventDefault();
+    $("#start").click(function(){
+      player1 =new Player("",0,0,0);
+      player2 =new Player("",0,0,0));
+      player1.name =("input#playerOne").val();
+      player2.name =("input#playerOne").val();
+      $("#player1").text(player1.name);
+      $("#player2").text(player2.name);
+      $("#players").hide();
+      $("pig-dice").show();
+      console.log(player1.name)
+  })
   });
 
     $(".reset").click(function(event) {
