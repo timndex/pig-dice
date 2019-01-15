@@ -9,3 +9,11 @@ function rollDice() {
   die2.innerHTML = d2;
   status.innerHTML = "you rolled "+diceTotal+".";
 }
+function add(){
+  var get1, view;
+  get1= document.getElementById("take").value;
+  view = document.getElementById("p1");
+  view = get1;
+  document.getElementById("p1").innerHTML=view;
+}
+  
